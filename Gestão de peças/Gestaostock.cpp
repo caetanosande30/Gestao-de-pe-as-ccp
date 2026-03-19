@@ -33,7 +33,7 @@ std::vector<Item> loadStock(const std::string& path) {
     std::vector<Item> stock;
     std::ifstream in(path);
     if (!in) {
-        // create a sample stock file if none exists
+        
         std::ofstream out(path);
         out << "Chave inglesa,15,12.00\n";
         out << "Macaco,5,45.00\n";
