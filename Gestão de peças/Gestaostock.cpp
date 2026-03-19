@@ -33,7 +33,7 @@ std::vector<Item> loadStock(const std::string& path) {
     std::vector<Item> stock;
     std::ifstream in(path);
     if (!in) {
-        
+       //Adição de produtoa
         std::ofstream out(path);
         out << "Chave inglesa,15,12.00\n";
         out << "Macaco,5,45.00\n";
@@ -48,7 +48,7 @@ std::vector<Item> loadStock(const std::string& path) {
         in.open(path);
     }
 
-    // Try to open existing file
+    
     if (in && in.peek() != std::ifstream::traits_type::eof()) {
         // load from file
         std::string line;
