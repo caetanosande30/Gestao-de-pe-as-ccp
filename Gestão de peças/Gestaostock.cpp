@@ -33,20 +33,7 @@ std::vector<Item> loadStock(const std::string& path) {
     std::vector<Item> stock;
     std::ifstream in(path);
     if (!in) {
-       //Adição de produtoa
-        std::ofstream out(path);
-        out << "Chave inglesa,15,12.00\n";
-        out << "Macaco,5,45.00\n";
-        out << "Porcas,50,0.10\n";
-        out << "Pernos,40,0.20\n";
-        out << "Pistoes,8,150.00\n";
-        out << "Vela de ignicao,20,7.50\n";
-        out << "Filtro de oleo,10,15.50\n";
-        out << "Radiador,3,220.00\n";
-        out << "Bateria,8,120.00\n";
-        out.close();
-        in.open(path);
-    }
+
 
     
     if (in && in.peek() != std::ifstream::traits_type::eof()) {
